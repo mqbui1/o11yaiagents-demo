@@ -15,8 +15,10 @@ pe "helm install splunk-otel-collector --set="splunkObservability.accessToken=VZ
 
 pe "kubectl get pods"
 
-pe "kubectl get ns k1 >/dev/null 2>&1 || kubectl create ns k1"
+pe "kubectl get ns k2 >/dev/null 2>&1 || kubectl create ns k2"
 
-pe "kubectl -n k1 apply -f ipbo-busybox.yaml"
+pe "cat ipbo-busybox.yaml"
 
-pe "kubectl -n k1 get pods -l app=ipbo-busybox -w"
+pe "kubectl -n k2 apply -f ipbo-busybox.yaml"
+
+pe "kubectl -n k2 get pods -l app=ipbo-busybox -w"
