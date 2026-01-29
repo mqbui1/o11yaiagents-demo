@@ -19,6 +19,8 @@ pe "kubectl get ns k2 >/dev/null 2>&1 || kubectl create ns k2"
 
 pe "cat ipbo-busybox.yaml"
 
+echo
+
 pe "kubectl -n k2 apply -f ipbo-busybox.yaml"
 
 pe "kubectl -n k2 get pods -l app=ipbo-busybox -w"
