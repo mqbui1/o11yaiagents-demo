@@ -11,7 +11,7 @@ clear
 # Put your stuff here
 pe "helm repo add splunk-otel-collector-chart https://signalfx.github.io/splunk-otel-collector-chart && helm repo update"
 
-pe "helm install splunk-otel-collector --set="splunkObservability.accessToken=VZiHqp4S_JFh0i-10QH2VQ,clusterName=troubleshooting-agent-demo,splunkObservability.realm=us1,gateway.enabled=false,splunkPlatform.endpoint=https://http-inputs-o11y-workshop-us1.splunkcloud.com:443/services/collector/event,splunkPlatform.token=ee8119b5-0fd0-40e6-89c3-c843fabbdf7a,environment=troubleshooting-agent-demo" splunk-otel-collector-chart/splunk-otel-collector"
+pe "helm install splunk-otel-collector --set="splunkObservability.accessToken=VZiHqp4S_JFh0i-10QH2VQ,clusterName=troubleshooting-agent-demo,splunkObservability.realm=us1,gateway.enabled=false,splunkPlatform.endpoint=https://http-inputs-o11y-playground-us1.stg.splunkcloud.com:443/services/collector/event,splunkPlatform.token=5c078b3f-49b7-4633-b2a1-c5a5f57c1160,environment=troubleshooting-agent-demo" splunk-otel-collector-chart/splunk-otel-collector"
 
 pe "kubectl get pods"
 
